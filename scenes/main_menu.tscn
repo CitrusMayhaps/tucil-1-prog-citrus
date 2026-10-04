@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cjnsp8pr4x85y"]
+
+[ext_resource type="Script" uid="uid://c0whk8qa1xmds" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="Main Menu" type="Node2D" unique_id=1371682120]
+script = ExtResource("1_l6cm7")
+
+[node name="Button Manager" type="Control" parent="." unique_id=813402332]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button Manager" unique_id=1562044093]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 266.0
+offset_right = 767.0
+offset_bottom = 454.0
+text = "Start
+"
+
+[node name="Label" type="Label" parent="." unique_id=151897409]
+offset_left = 213.0
+offset_top = 105.0
+offset_right = 981.0
+offset_bottom = 128.0
+text = "Very cool game that i made believe me i sacrificed my study hour for this game pls have mercy :sob:"
+
+[connection signal="pressed" from="Button Manager/Start" to="." method="_on_start_pressed"]

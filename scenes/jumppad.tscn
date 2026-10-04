@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dy5ybd86wro6r"]
+
+[ext_resource type="Texture2D" uid="uid://4sqbean2e4j5" path="res://assets/sprites/world_tileset.png" id="1_rof1k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iihu"]
+atlas = ExtResource("1_rof1k")
+region = Rect2(80, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_280fc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8iihu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_280fc"]
+size = Vector2(14, 5)
+
+[node name="Jumppad" type="Area2D" unique_id=656352854]
+collision_layer = 4607
+collision_mask = 4607
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1104688307]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_280fc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=154353953]
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_280fc")
